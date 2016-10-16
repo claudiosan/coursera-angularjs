@@ -1,0 +1,13 @@
+		<div class="row" ng-if="list.isMessage()">
+			<span class="label label-danger">{{list.message}}</span> <br /><br />
+		</div>
+		<div class="row">
+			<div class="list">
+				<ul>
+					<li ng-repeat="item in list.items">
+						<button class=" btn-warning" ng-click="list.onRemove({index:$index})">X</button> 
+						{{item.short_name}} - {{item.name}} - {{item.description}}
+					</li>
+				</ul>
+			</div>
+		</div>
